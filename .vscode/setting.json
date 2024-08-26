@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "**/templates/**/*.html": "django-html"
+    }
+}
