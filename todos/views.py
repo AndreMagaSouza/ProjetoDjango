@@ -25,6 +25,5 @@ class TodoDeleteView(DeleteView):
 class TodoCompleteView(View):
     def get(self, request, pk):
         todo = get_object_or_404(Todo, pk=pk)
-        todo.finished_at = date.today()
-        todo.save()
+        todo.mark_as_completed()
         return redirect("todo_list")
